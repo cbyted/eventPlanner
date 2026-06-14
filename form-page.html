@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/form-page.css">
+</head>
+
+    <body>
+
+        <main class="container">
+
+            <section class="activities-card">
+
+                <form action="https://api.web3forms.com/submit" method="POST" id="date-form">
+
+                    <input type="hidden" name="access_key" value="">
+                    <!-- ACTIVIDADES -->
+
+                    <div class="form-group">
+
+                        <h1>¿Qué te gustaría hacer?</h1>
+
+                        <div class="main-options">
+
+                            <div class="activity">
+                                <input
+                                    type="radio"
+                                    id="cinema"
+                                    name="actividad"
+                                    value="Cine"
+                                    required>
+
+                                <label for="cinema">
+                                    <img
+                                        src="assets/cinema.png"
+                                        alt="Cine"
+                                    >
+                                    <span>Cine</span>
+                                </label>
+                            </div>
+
+                            <div class="activity">
+                                <input
+                                    type="radio"
+                                    id="coffee"
+                                    name="actividad"
+                                    value="Café">
+
+                                <label for="coffee">
+                                    <img
+                                        src="assets/coffee.png"
+                                        alt="Café"
+                                    >
+                                    <span>Café</span>
+                                </label>
+                            </div>
+
+                            <div class="activity">
+                                <input
+                                    type="radio"
+                                    id="dinner"
+                                    name="actividad"
+                                    value="Cena">
+
+                                <label for="dinner">
+                                    <img
+                                        src="assets/lunch.png"
+                                        alt="Cena"
+                                    >
+                                    <span>Cena</span>
+                                </label>
+                            </div>
+
+                            <div class="activity selected">
+                                <input
+                                    type="radio"
+                                    id="walk"
+                                    name="actividad"
+                                    value="Paseo">
+
+                                <label for="walk">
+                                    <img
+                                        src="assets/park.png"
+                                        alt="Paseo"
+                                    >
+                                    <span>Paseo</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ACTIVIDAD PERSONALIZADA -->
+
+                    <div class="form-group extra">
+                        <label for="customActivity">
+                            ¿Alguna otra idea? 
+                        </label>
+                        <input
+                            type="text"
+                            id="customActivity"
+                            name="actividad_personalizada"
+                            placeholder="Escribe tu idea..."
+                        >
+                    </div>
+
+                    <!-- FECHA -->
+
+                    <div class="form-group date">
+                        <label for="date">
+                            ¿Qué día prefieres?
+                        </label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="fecha"
+                            required
+                        >
+                    </div>
+
+                    <!-- MOMENTO DEL DÍA -->
+
+                    <div class="form-group time">
+
+                        <h2>¿Qué momento del día prefieres?</h2>
+
+                        <div class="time-options">
+                            <div class="time-option">
+                                <input
+                                    type="radio"
+                                    id="morning"
+                                    name="momento"
+                                    value="Mañana"
+                                    required
+                                >
+                                <label for="morning">
+                                    <span class="emoji">☀️</span>
+                                    <span>Mañana</span>
+                                </label>
+                            </div>
+
+                            <div class="time-option">
+                                <input
+                                    type="radio"
+                                    id="afternoon"
+                                    name="momento"
+                                    value="Tarde"
+                                >
+                                <label for="afternoon">
+                                    <span class="emoji">🌤️</span>
+                                    <span>Tarde</span>
+                                </label>
+                            </div>
+
+                            <div class="time-option">
+                                <input
+                                    type="radio"
+                                    id="night"
+                                    name="momento"
+                                    value="Noche"
+                                >
+                                <label for="night">
+                                    <span class="emoji">🌙</span>
+                                    <span>Noche</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COMENTARIOS -->
+
+                    <div class="form-group">
+                        <textarea
+                            id="comments"
+                            name="comentarios"
+                            rows="4"
+                            placeholder="¿Algúna sugerencia, lugar, etc?..."
+                        ></textarea>
+                    </div>
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="submit"
+                        id="btnSend">
+                        Enviar respuesta
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <script src="script/form.js"></script>
+
+    </body>
+
+</html>
